@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@400;600&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background-color: var(--DarkBlue);
+    color: var(--White);
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 3rem;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;  
+    align-items: center;
+    margin: 1rem 2rem;
+
+}
+
+.menu a:hover {
+    color: var(--yelow);
+}
+
+
+.menu_icon {    
+    display: none; 
+}
+
+@media (max-width: 750px) {
+    
+    .menu_icon {
+        display: block;
+        margin-right: 2rem;
+        margin-top: 2rem;
+    }
+
+    .menu {
+               
+        background-color:inherit;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        z-index: 99;
+        
+    }
+
+    .show_menu {
+        transform: translateX(0);
+    }
+    
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+:root {
+    --yelow: #F1A600;
+    --DarkBlue: #1F1D2C;
+    --DarkGrey: #242635;
+    --Marfil: #E5E5E5;
+    --White: #FFFFFF;
+    font-size: 18px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    color: var(--White);
+    width: 100%;
+
+    
+
+}
+
+.home {
+
+background-color: var(--DarkBlue);
+
+}
+
+* > h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+
+.home h1, p {
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.home p {
+    color: var(--Marfil);
+}
+
+.image {
+    width: 200px;
+    height: 250px;
+}
+img {
+    width: 100%;
+    display: block;
+}
+
+.home strong {
+    color: var(--yelow)
+}
+
+.home_logos {
+    display: flex;
+    gap: 1rem;
+}
+
+.about {
+    
+    background-color: var(--DarkGrey);
+   
+    
+}
+
+.about img {
+    height: 110px;
+    width: 100px;
+    display: block;
+    margin-top: 2rem;
+
+}
+
+.about_logos:nth-child(2) {
+    height: 500px;
+    
+
+}
+.about p, h4 {
+    color: var(--Marfil);
+}
+
+.about h4 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.work_history {
+    background-color: var(--DarkBlue);
+    
+}
+
+.work_history .wh_items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   /* display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   justify-content: center;
+   align-items: center; */
+   
+}
+
+.work_history .wh_items p {
+    font-size: 1rem;
+}
+
+.wh_items svg {
+    transform: scale(0.6);
+}
+
+.wh_items .co_names p {
+    display: flex;
+    align-self: flex-start;
+}
+
+.wh_items .co_names h4 {
+    color: var(--Marfil);
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+
+}
+
+.work_skills {
+
+    background-color: var(--DarkBlue);
+    
+    
+    
+}
+
+.work_skills h2 {
+    align-self: center;
+}
+
+.skills {display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.work_skills .skills .ind_skills {
+   display: flex;
+   align-self: start;
+   gap: 3rem;
+   width: 100%;
+    
+}
+
+.work_skills .ind_skills p:nth-child(1) {
+    color: var(--yelow);
+    font-size: 2rem;
+    
+    
+}
+
+.work_skills .ind_skills p:nth-child(2) {
+   text-align:justify;
+
+  
+}
+
+
+
+.portfolio {
+    
+    background-color: var(--DarkBlue);
+   
+}
+
+.portfolio .images {
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   
+
+}
+.portfolio .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact {
+    
+    background-color: var(--DarkGrey);
+    
+}
+
+.contact .contact_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact .contact_content .contact_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .contact_info {
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.contact .contact_info h6 {
+    color: var(--Marfil);
+}
+
+.contact .contact_item svg {
+    align-self: center;
+    transform: scale(1.3);
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background-color: var(--DarkGrey);
+    color: var(--Marfil);
+    font-size: 0.7rem;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 750px) {
+
+    body {
+        margin: 0 auto;
+        max-width: 2400px;
+        font-size: 18px;
+        font-weight: 400;
+    }  
+
+    .home {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: start;
+        column-gap: 3rem;
+        row-gap: 0.5rem;
+        padding: 3rem;      
+    }
+
+    .image {
+        width: 300px;
+        height: 350px;
+        margin-left: 10rem;
+    }
+
+    .home h1, p, .home_logos {
+        text-align: left;
+    }
+
+    .home h1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .home p:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .home p:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .home .home_logos {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .home .image {
+        grid-column: 2 / 3;
+        grid-row: 1 / 5;
+    }
+
+    .about_logos {
+        display: flex;
+        gap: 10rem;
+    }
+
+    .portfolio {
+        height: 100%;
+        width: 100%;
+    }  
+
+
+    .portfolio .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .contact .contact_content {
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+        margin: 2rem 0;
+    }
+
+    footer {
+        background-color: var(--DarkBlue);
+    }
+}
+
